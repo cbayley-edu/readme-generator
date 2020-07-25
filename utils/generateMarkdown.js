@@ -1,18 +1,57 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  //use functions to make sure results contain data
+  //use IFs to make sure results contain data
+  //toc - append to toc text in if statements to create a proper toc
+  let toc = "";
+  //set to blank strings
+  let lessonName = "";
+  let description = "";
+  let installation = "";
+  let usage = "";
+  let credits = "";
   let badges = "";
-  if(data.stack) {
-    licenses = data.stack;
+  let contributing = "";
+  let tests = "";
+
+  //lessonName
+  if(data.lessonName){
+    lessonName = `### ${data.lessonName} \n\n`;
+  }
+  //description
+  if(data.description){
+    description = `## Description \n\n${data.description} \n\n`;
+  }
+  //installation
+  if(data.installation){
+    installation = `## ${data.installation} \n\n`;
+  }
+  //usage
+  if(data.usage){
+    usage = `## ${data.usage} \n\n`;
+  }
+  //credits
+  if(data.credits){
+    credits = `## ${data.credits} \n\n`;
+  }
+  //license badges - use selected licBadge values to call license function to get badge
+  if(data.licBadge) {
+    badges = "## License \n\n"
+    licenses = data.licBadge;
     licenses.forEach(function(val,i) {
       badges += `${license(val)}\n`;
     });
   }
+  //contributing
+  if(data.contributing){
+    contributing = `## ${data.contributing} \n\n`;
+  }
+  //tests
+  if(data.tests){
+    tests = `## ${data.tests} \n\n`;
+  }
 
 return `# ${data.projectTitle} \n
-${badges} \n
-
-`;
+${lessonName}${description}${badges}end`;
 }
 
 function license(key) {

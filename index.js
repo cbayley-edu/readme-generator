@@ -2,7 +2,6 @@ var inquirer = require("inquirer");
 var fs = require("fs");
 var generateMarkdown = require("./utils/generateMarkdown.js");
 
-
 // function to validate questions that can't be blank
 const cannotBeBlank = async(input) => {
     if (input === "") {
@@ -35,24 +34,20 @@ const questions = [
         message: "Enter text for the Installation section:",
       },
       {
-        type: "input",
-        name: "contributing",
-        message: "Enter text for the Contributing section (if desired):",
-      },
-      {
-        type: "input",
-        name: "tests",
-        message: "Enter text for the Tests section (if desired):",
-      },
-      {
         type: "editor",
         name: "usage",
         message: "Enter steps for the usage section (notepad or vim will launch, enter text as you wish to see it). Hint: format for screen shots ![screen shot](./imgs/screen-shot.png)",
+        validate: cannotBeBlank
+      },
+      {
+        type: "input",
+        name: "credits",
+        message: "Enter text for the Credits section (include any collaborators):",
       },
       {
         type: "checkbox",
         message: "What licenses would you like to include?",
-        name: "stack",
+        name: "licBadge",
         choices: [
           "Apache v2.0", 
           "Boost v1.0", 
@@ -73,8 +68,22 @@ const questions = [
           "Unlicense",
           "WTFPL",
           "Zlib/libpng",
-
         ]
+      },
+      {
+        type: "input",
+        name: "contributing",
+        message: "Enter text for the Contributing section (if desired):",
+      },
+      {
+        type: "input",
+        name: "tests",
+        message: "Enter text for the Tests section (if desired):",
+      },
+      {
+        type: "input",
+        name: "generate",
+        message: "Press ENTER to generate your README.md file in the root folder of this project.",
       }
     
 ];
@@ -98,7 +107,7 @@ function init() {
         // var usage = response.usage;
         // var output = projectTitle + "\n" + usage;
         const output = generateMarkdown(response);
-        writeToFile("readme.md", output);
+        writeToFile("README.md", output);
     });
 }
 
