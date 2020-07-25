@@ -1,6 +1,6 @@
 # Good README.md Generator 
 
-###  Unit 09 Node.js and ES6+ Homework: Good README Generator 
+### Unit 09 Node.js and ES6+ Homework: Good README Generator 
 
 ## Description 
 
@@ -12,17 +12,18 @@ A good readme.md file is key to a good project on your GitHub repository. It giv
 * [Usage](#usage)
 * [License](#license)
 
-## Using GitHub, clone or fork the repository. You'll need to get the repo pulled to your local repository. 
 
-## (add this to the install section)
-Once you have the repo locally, be sure to run npm install from your terminal to install inquirer and all other dependencies for the application.
+## Installation 
 
-![npm install](./imgs/npm-install.png)
+Using GitHub, clone or fork the repository. You'll need to get the repo pulled to your local repository. Once you have the repo locally, be sure to run npm install from your terminal to install inquirer and all other dependencies for the application. 
 
-If you plan to push the repo back to your GitHub repo, be sure to add a .gitignore file to your root folder and ignore node_modules and .DS_Store/ .
+![npm install](./imgs/npm-install.png) 
 
+If you plan to push the repo back to your GitHub repo, be sure to add a .gitignore file to your root folder and ignore node_modules and .DS_Store/ . 
 
-(usage)Make sure you are in the root folder of the project in your terminal and type node index.js.
+## Usage
+
+Make sure you are in the root folder of the project in your terminal and type node index.js.
 
 ![start program](./imgs/start-program.png)
 
@@ -39,7 +40,7 @@ Once you are done entering text in the editor, save and close the text editor to
 
 If there are questions that you don't want included in the README file, simply leave the answer blank and press enter.  For example, if you didn't have any collaborators then there would be no need to enter information for that section.
 
-For the license section, you can choose from a list of pre-determined licenses. Selecting the license(s) from the list will then show the license badge, with a link, in your README.
+For the license section, you can choose from a list of pre-determined licenses. Selecting the license(s) from the list will then show the license badge, with a link, in your README. (as shown, use the space bar to select (a) license(s))
 
 ![licenses-select](./imgs/select-license.png)
 ![licenses-display](./imgs/display-license.png)

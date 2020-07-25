@@ -2,7 +2,7 @@
 function generateMarkdown(data) {
   //use IFs to make sure results contain data
   //toc - append to toc text in if statements to create a proper toc
-  let toc = "## Table of Contents \n\n";
+  let toc = "## Table of Contents \n";
   //set to blank strings
   let lessonName = "";
   let description = "";
@@ -24,17 +24,17 @@ function generateMarkdown(data) {
   //installation
   if(data.installation){
     installation = `## Installation \n\n${data.installation} \n\n`;
-    toc += "* [Installation](#installation)\n";
+    toc += "\n* [Installation](#installation)";
   }
   //usage
   if(data.usage){
-    usage = `## ${data.usage} \n\n`;
-    toc += "* [Usage](#usage)\n";
+    usage = `## Usage \n\n${data.usage} \n\n`;
+    toc += "\n* [Usage](#usage)";
   }
   //credits
   if(data.credits){
     credits = `## Credits \n\n${data.credits} \n\n`;
-    toc += "* [Credits](#credits)\n";
+    toc += "\n* [Credits](#credits)";
   }
   //license badges - use selected licBadge values to call license function to get badge
   if(data.licBadge) {
@@ -43,17 +43,17 @@ function generateMarkdown(data) {
     licenses.forEach(function(val,i) {
       badges += `${license(val)}\n`;
     });
-    toc += "* [License](#license)\n";
+    toc += "\n* [License](#license)";
   }
   //contributing
   if(data.contributing){
     contributing = `## Contributing \n\n${data.contributing} \n\n`;
-    toc += "* [Contributing](#contributing)\n";
+    toc += "\n* [Contributing](#contributing)";
   }
   //tests
   if(data.tests){
     tests = `## Tests \n\n${data.tests} \n\n`;
-    toc += "* [Tests](#tests)\n";
+    toc += "\n* [Tests](#tests)";
   }
   toc = toc += "\n\n";
 
