@@ -15,7 +15,7 @@ const questions = [
     {
         type: "input",
         name: "projectTitle",
-        message: "What is your Project Title?",
+        message: "What is your Project Title? (required)",
         validate: cannotBeBlank
       },
       {
@@ -36,7 +36,7 @@ const questions = [
       {
         type: "editor",
         name: "usage",
-        message: "Enter steps for the usage section (notepad or vim will launch, enter text as you wish to see it). Hint: format for screen shots ![screen shot](./imgs/screen-shot.png)",
+        message: "Enter steps for the usage section (required) (notepad or vim will launch, enter text as you wish to see it). Hint: format for screen shots ![screen shot](./imgs/screen-shot.png)",
         validate: cannotBeBlank
       },
       {
