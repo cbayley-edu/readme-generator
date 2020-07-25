@@ -1,7 +1,9 @@
 var inquirer = require("inquirer");
 var fs = require("fs");
+var generateMarkdown = require("./utils/generateMarkdown.js");
 
-//function to validate questions that can't be blank
+
+// function to validate questions that can't be blank
 const cannotBeBlank = async(input) => {
     if (input === "") {
        return "You must supply a value";
@@ -42,45 +44,11 @@ const questions = [
         name: "tests",
         message: "Enter text for the Tests section:",
       },
-
-
-
-
-      //this might be the answer for the loop below
       {
         type: "editor",
         name: "usage",
-        message: "Enter steps for the usage section. Enter screen shots like example: ![screen shot](./imgs/screen-shot.png).",
+        message: "Enter steps for the usage section (notepad or vim will launch, enter text as you wish to see it). Hint: format for screen shots ![screen shot](./imgs/screen-shot.png)",
       },
-
-
-
-      //how can I loop through this??  do I do it in the code?
-      {
-        type: "input",
-        name: "usageStep",
-        message: "Enter text for a step for the Usage section:",
-      },
-      {
-        type: "input",
-        name: "usageImageFileName",
-        message: "If you want to include a screen shot for the text, enter the file name (ex. screen-shot.png):",
-      },
-      {
-        type: "input",
-        name: "usageImageAltText",
-        message: "If you included a screen shot, enter a description for the image:",
-      },
-      //do I need to add a question here to add another step to loop through the above 3 questions?
-      {
-        type: "confirm",
-        name: "usageAddAnotherStep",
-        message: "Do you need to add another step to the Update section?",
-      },
-
-
-
-
       {
         type: "checkbox",
         message: "What licenses would you like to include?",
@@ -97,7 +65,11 @@ const questions = [
 
 // function to write README file
 function writeToFile(fileName, data) {
-
+    fs.writeFile(fileName, data, function(err){
+      if (err) {
+          return console.log(err);
+      }        
+  });
 
 }
 
@@ -106,14 +78,11 @@ function init() {
     inquirer
     .prompt(questions)
       .then(function(response) {
-        var projectTitle = response.projectTitle;
-        var usage = response.usage;
-        var output = projectTitle + "\n" + usage;
-        fs.writeFile("log.txt", output, function(err){
-            if (err) {
-                return console.log(err);
-            }        
-        });
+        // var projectTitle = response.projectTitle;
+        // var usage = response.usage;
+        // var output = projectTitle + "\n" + usage;
+        const output = generateMarkdown(response);
+        writeToFile("readme.md", output);
     });
 }
 
