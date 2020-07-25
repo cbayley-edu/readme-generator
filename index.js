@@ -37,12 +37,12 @@ const questions = [
       {
         type: "input",
         name: "contributing",
-        message: "Enter text for the Contributing section:",
+        message: "Enter text for the Contributing section (if desired):",
       },
       {
         type: "input",
         name: "tests",
-        message: "Enter text for the Tests section:",
+        message: "Enter text for the Tests section (if desired):",
       },
       {
         type: "editor",
@@ -54,10 +54,26 @@ const questions = [
         message: "What licenses would you like to include?",
         name: "stack",
         choices: [
-          "MIT", 
-          "MIT", 
-          "MIT", 
-          "MIT"
+          "Apache v2.0", 
+          "Boost v1.0", 
+          "BSD v3", 
+          "Creative Commons v1.0 (non-international)",
+          "Eclipse Public License v1.0",
+          "GNU GPL v3",
+          "IBM Public License v1.0",
+          "ISC",
+          "MIT",
+          "Mozilla Public License v2.0",
+          "Open Data Commons - Attribution License (BY)",
+          "Open Data Commons - Open Database License (ODbL)",
+          "Open Data Commons - Public Domain Dedication and License (PDDL)",
+          "Perl License",
+          "Perl Artistic License v2.0",
+          "SIL Open Font License v1.1",
+          "Unlicense",
+          "WTFPL",
+          "Zlib/libpng",
+
         ]
       }
     
