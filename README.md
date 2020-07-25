@@ -4,7 +4,7 @@
 
 ## Description 
 
-A good readme.md file is key to a good project on your GitHub repository. It gives people an intial overview of your project as well as how to access it, use it, and any other pertinent information that you provide. README files are separated into sections and can include a Table of Contents for visitors to quickly access the different sections of your readme at the click of a button. \n\nThis readme generator will prompt you with questions, thus guiding you through easily creating your readme file for your project. It is run using node.js with inquirer. 
+A good readme.md file is key to a good project on your GitHub repository. It gives people an initial overview of your project as well as how to access it, use it, and any other pertinent information that you provide. README files are separated into sections and can include a Table of Contents for visitors to quickly access the different sections of your readme at the click of a button. \n\nThis readme generator will prompt you with questions, thus guiding you through easily creating your readme file for your project. It is run using node.js with inquirer. 
 
 ## Table of Contents 
 
@@ -30,7 +30,7 @@ As you are prompted, answer the questions and hit enter.
 
 ![questions](./imgs/questions.png)
 
-The Project Title and Usage answers are required as noted in the prompt. The Usage section will lauch notepad or vim (or your default text editor), which gives you the ability to enter multiple lines of text with carriage returns that will appear exactly as you type it when the README is generated. You can also include references to images to include screen shots.
+The Project Title and Usage answers are required as noted in the prompt. The Usage section will launch notepad or vim (or your default text editor), which gives you the ability to enter multiple lines of text with carriage returns that will appear exactly as you type it when the README is generated. You can also include references to images to include screen shots.
 
 ![usage-text-question](./imgs/usage-text-question.png)
 ![usage-text](./imgs/usage-text.png)
