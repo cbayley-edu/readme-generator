@@ -6,14 +6,15 @@
 
 A good readme.md file is key to a good project on your GitHub repository. It gives people an initial overview of your project as well as how to access it, use it, and any other pertinent information that you provide. README files are separated into sections and can include a Table of Contents for visitors to quickly access the different sections of your readme at the click of a button. 
 
-This readme generator will prompt you with questions, thus guiding you through easily creating your readme file for your project. It is run using node.js with inquirer. 
+This readme generator will prompt you with questions, thus guiding you through easily creating your readme file for your project. It is run using node.js with inquirer.  
 
 ## Table of Contents 
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [Credits](#credits)
 * [License](#license)
-
+* [Questions](#questions)
 
 ## Installation 
 
@@ -21,9 +22,9 @@ Using GitHub, clone or fork the repository. You'll need to get the repo pulled t
 
 ![npm install](./imgs/npm-install.png) 
 
-If you plan to push the repo back to your GitHub repo, be sure to add a .gitignore file to your root folder and ignore node_modules and .DS_Store/ . 
+If you plan to push the repo back to your GitHub repo, be sure to add a .gitignore file to your root folder and ignore node_modules and .DS_Store/ .  
 
-## Usage
+## Usage 
 
 Make sure you are in the root folder of the project in your terminal and type node index.js.
 
@@ -55,6 +56,21 @@ Push your project to GitHub to view the README.md file with all of the formattin
 
 ![readme.md-github-display](./imgs/readme-md-file-github.png) 
 
+## Credits 
+
+Lukas Himsel (lukas-h) https://gist.github.com/lukas-h  
+For his license badge repo: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba#open-database-license-odbl 
+
 ## License 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+This project is covered by the above license(s). Click on the badge for more information.
+
+## Questions 
+
+GitHub username: cbayley-edu
+GitHub profile link: https://github.com/cbayley-edu
+
+Please email me at christinabayley@comcast.net with any questions you have or any issues you come across.
+

@@ -10,6 +10,8 @@ function generateMarkdown(data) {
   let usage = "";
   let credits = "";
   let badges = "";
+  let licenses = "";
+  let licenseText = "";
   let contributing = "";
   let tests = "";
 
@@ -43,6 +45,7 @@ function generateMarkdown(data) {
     licenses.forEach(function(val,i) {
       badges += `${license(val)}\n`;
     });
+    licenseText = `\nThis project is covered by the above license(s). Click on the badge for more information.\n\n`
     toc += "\n* [License](#license)";
   }
   //contributing
@@ -55,10 +58,15 @@ function generateMarkdown(data) {
     tests = `## Tests \n\n${data.tests} \n\n`;
     toc += "\n* [Tests](#tests)";
   }
+  //questions
+  if(data.githubUsername || data.emailAddress){
+    questions = `## Questions \n\nGitHub username: ${data.githubUsername}\nGitHub profile link: https://github.com/${data.githubUsername}\n\nPlease email me at ${data.emailAddress} with any questions you have or any issues you come across.\n\n`;
+    toc += "\n* [Questions](#questions)";
+  }
   toc = toc += "\n\n";
 
 return `# ${data.projectTitle} \n
-${lessonName}${description}${toc}${installation}${usage}${credits}${badges}${contributing}${tests}`;
+${lessonName}${description}${toc}${installation}${usage}${credits}${badges}${licenseText}${contributing}${tests}${questions}`;
 }
 
 //function that is called to grab correct url for license

@@ -82,6 +82,18 @@ const questions = [
       },
       {
         type: "input",
+        name: "githubUsername",
+        message: "What is your GitHub user name? (required)",
+        validate: cannotBeBlank
+      },
+      {
+        type: "input",
+        name: "emailAddress",
+        message: "What is your email address? (required)",
+        validate: cannotBeBlank
+      },
+      {
+        type: "input",
         name: "generate",
         message: "Press ENTER to generate your README.md file in the root folder of this project.",
       }
