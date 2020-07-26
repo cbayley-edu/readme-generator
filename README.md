@@ -6,7 +6,7 @@
 
 A good readme.md file is key to a good project on your GitHub repository. It gives people an initial overview of your project as well as how to access it, use it, and any other pertinent information that you provide. README files are separated into sections and can include a Table of Contents for visitors to quickly access the different sections of your readme at the click of a button. 
 
-This readme generator will prompt you with questions, thus guiding you through easily creating your readme file for your project. It is run using node.js with inquirer.  
+This readme generator will prompt you with questions, thus guiding you through easily creating your readme file for your project. It is run using node.js with inquirer. 
 
 ## Table of Contents 
 
@@ -22,9 +22,11 @@ Using GitHub, clone or fork the repository. You'll need to get the repo pulled t
 
 ![npm install](./imgs/npm-install.png) 
 
-If you plan to push the repo back to your GitHub repo, be sure to add a .gitignore file to your root folder and ignore node_modules and .DS_Store/ .  
+If you plan to push the repo back to your GitHub repo, be sure to add a .gitignore file to your root folder and ignore node_modules and .DS_Store/ . 
 
 ## Usage 
+
+#### Access a step-by-step video here: https://drive.google.com/file/d/1YNvJGLaye7FVpuVK36Q_OEdfbIbvoBAZ/view 
 
 Make sure you are in the root folder of the project in your terminal and type node index.js.
 
@@ -54,7 +56,7 @@ The last question will ask you to hit Enter to create the generate the README.md
 
 Push your project to GitHub to view the README.md file with all of the formatting and to test the TOC.
 
-![readme.md-github-display](./imgs/readme-md-file-github.png) 
+![readme.md-github-display](./imgs/readme-md-file-github.png)  
 
 ## Credits 
 

@@ -42,7 +42,7 @@ const questions = [
       {
         type: "input",
         name: "credits",
-        message: "Enter text for the Credits section (include any collaborators):",
+        message: "Enter text for the Credits section:",
       },
       {
         type: "checkbox",
@@ -115,9 +115,6 @@ function init() {
     inquirer
     .prompt(questions)
       .then(function(response) {
-        // var projectTitle = response.projectTitle;
-        // var usage = response.usage;
-        // var output = projectTitle + "\n" + usage;
         const output = generateMarkdown(response);
         writeToFile("README.md", output);
     });
