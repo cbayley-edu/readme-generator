@@ -26,7 +26,8 @@ If you plan to push the repo back to your GitHub repo, be sure to add a .gitigno
 
 ## Usage 
 
-#### Access a step-by-step video here: https://drive.google.com/file/d/1YNvJGLaye7FVpuVK36Q_OEdfbIbvoBAZ/view 
+#### Access a step-by-step video here: https://drive.google.com/file/d/1YNvJGLaye7FVpuVK36Q_OEdfbIbvoBAZ/view
+#### Repo link: https://github.com/cbayley-edu/readme-generator
 
 Make sure you are in the root folder of the project in your terminal and type node index.js.
 
